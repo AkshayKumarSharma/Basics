@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Basics.LinkedList
 {
-    internal class Node
+    internal class Node<T>
     {
-        internal int data;
-        internal Node next;
-        public Node(int d)
+        internal T data;
+        internal Node<T> next;
+        public Node(T d)
         {
             data = d;
             next = null;

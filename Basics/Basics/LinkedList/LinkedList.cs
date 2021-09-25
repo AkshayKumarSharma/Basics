@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Basics.LinkedList
 {
-    public class LinkedList
+    public class LinkedList<T>
     {
-        private Node Head { get; set; }
+        private Node<T> Head { get; set; }
 
         public void PrintAllNodes()
         {
@@ -19,9 +19,9 @@ namespace Basics.LinkedList
             }
         }
 
-        public void AddFirst(int number)
+        public void AddFirst(T number)
         {
-            Node node = new Node(number);
+            Node<T> node = new Node<T>(number);
 
             if (Head == null)
             {
@@ -33,9 +33,9 @@ namespace Basics.LinkedList
                 Head = node;
             }
         }
-        public void AddLast(int number)
+        public void AddLast(T number)
         {
-            Node node = new Node(number);
+            Node<T> node = new Node<T>(number);
 
             if (Head == null)
             {

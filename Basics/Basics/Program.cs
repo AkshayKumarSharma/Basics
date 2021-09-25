@@ -1,4 +1,5 @@
 ﻿using System;
+using Basics.LinkedList;
 
 namespace Basics
 {
@@ -6,7 +7,11 @@ namespace Basics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var linkedList = new LinkedList.LinkedList();
+            linkedList.AddFirst(1);
+            linkedList.AddFirst(2);
+
+            linkedList.PrintAllNodes();
         }
     }
 }

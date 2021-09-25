@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Basics.LinkedList
 {
-   public class LinkedList
+    public class LinkedList
     {
         private Node Head { get; set; }
 
@@ -12,7 +12,7 @@ namespace Basics.LinkedList
         {
             var node = Head;
 
-            while(node != null)
+            while (node != null)
             {
                 Console.WriteLine(node.data);
                 node = node.next;
@@ -33,5 +33,26 @@ namespace Basics.LinkedList
                 Head = node;
             }
         }
+        public void AddLast(int number)
+        {
+            Node node = new Node(number);
+
+            if (Head == null)
+            {
+                Head = node;
+            }
+            else
+            {
+                var current = Head;
+
+                while (current.next != null)
+                {
+                    current = current.next;
+                }
+                current.next = node;
+
+            }
+        }
+
     }
 }
